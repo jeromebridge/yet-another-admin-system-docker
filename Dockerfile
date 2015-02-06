@@ -5,9 +5,9 @@ MAINTAINER BRIDGE, JEROME <jeromebridge@pennassurancesoftware.com>
 # RUN rm -rf /etc/Dockerfile
 # ADD Dockerfile /etc/Dockerfile
 
-# Install Ping
+# Install Ping, Git
 RUN apt-get update && \
-    apt-get install -y iputils-ping && \
+    apt-get install -y iputils-ping git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+# Download Boot
+git clone https://github.com/jeromebridge/yet-another-admin-system-boot.git
+cd yet-another-admin-system-boot
+
+# Run Application
 YAAS_CONFIG_OPTS=""
 if ping -c 1 DB &> /dev/null
 then
