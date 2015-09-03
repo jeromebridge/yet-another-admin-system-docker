@@ -1,4 +1,4 @@
-FROM niaquinto/gradle
+FROM niaquinto/gradle:2.1
 MAINTAINER BRIDGE, JEROME <jeromebridge@pennassurancesoftware.com>
 
 # In case someone loses the Dockerfile
@@ -22,16 +22,17 @@ RUN apt-get update && \
 # USER yaas
 #########################################################################
 
-
-
 # Script to run app
 ADD run.sh ./run.sh
 RUN chmod 755 /*.sh
+RUN mkdir /working
 
 # Set your default behavior
 ENTRYPOINT ["/run.sh"]
 
 
+# Volume(s)
+VOLUME ["/working"]
 
 
 # DELETE ME!!!!

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Working Directory
+cd /working
+rm -Rf /working/*
 
 # Download Boot
 git clone https://github.com/jeromebridge/yet-another-admin-system-boot.git
