@@ -24,7 +24,7 @@ RUN apt-get update && \
 
 # Script to run app
 ADD run.sh ./run.sh
-RUN chmod 755 /*.sh
+RUN chmod 755 ./run.sh
 RUN mkdir /working
 
 # Set your default behavior
